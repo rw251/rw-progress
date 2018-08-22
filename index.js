@@ -108,18 +108,15 @@ exports.Progress = {
     if (!n) {
       return this.start();
     }
-    if (n <= 1) {
-      if (typeof incAmount !== 'number') {
-        if (n >= 0 && n < 0.99) {
-          incAmount = -0.04289716316 * Math.log(n) - 0.0004519479162;
-        } else {
-          incAmount = 0;
-        }
+    if (typeof incAmount !== 'number') {
+      if (n >= 0 && n < 0.976) {
+        incAmount = -0.04289716316 * Math.log(n) - 0.0004519479162;
+      } else {
+        incAmount = 0;
       }
-
-      return this.set(Math.min(Math.max(n + incAmount, 0), 0.994));
     }
-    return this;
+
+    return this.set(Math.min(Math.max(n + incAmount, 0), 0.994));
   },
 
   start() {

@@ -69,6 +69,24 @@ describe('#rw-progress', () => {
       const progress = document.getElementById(progressId);
       expect(progress.parentNode.nodeName).to.equal('BODY');
     });
+
+    it('must increment automatically', (done) => {
+      Progress.start();
+      expect(Progress.status).to.equal(0.08);
+      setTimeout(() => {
+        expect(Progress.status).to.be.greaterThan(0.08);
+        done();
+      }, 300);
+    });
+
+    it('must not start twice', (done) => {
+      Progress.start();
+      setTimeout(() => {
+        Progress.start();
+        expect(Progress.status).to.be.greaterThan(0.08);
+        done();
+      }, 300);
+    });
   });
 
   describe('.done()', () => {
@@ -122,6 +140,14 @@ describe('#rw-progress', () => {
     it('should never reach 1.0', () => {
       for (let i = 0; i < 100; i += 1) { Progress.inc(); }
       expect(Progress.status).to.be.lessThan(1);
+    });
+
+    it('must stop eventually', () => {
+      Progress.start();
+      Progress.inc(0.99);
+      expect(Progress.status).to.equal(0.994);
+      Progress.inc();
+      expect(Progress.status).to.equal(0.994);
     });
   });
 });
