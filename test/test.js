@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const { Progress } = require('../index');
 require('jsdom-global')();
 
-const progressId = 'nprogress';
+const progressId = 'rwp';
 
 describe('#rw-progress', () => {
   afterEach(() => {
@@ -20,7 +20,7 @@ describe('#rw-progress', () => {
       const progress = document.getElementById(progressId);
       expect(progress).to.not.equal(null);
       expect(progress.childNodes.length).to.equal(1);
-      expect(progress.childNodes[0].className).to.equal('bar');
+      expect(progress.childNodes[0].className).to.equal('b');
     });
 
     it('.set(1) should appear and disappear', (done) => {

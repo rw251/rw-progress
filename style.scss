@@ -1,9 +1,9 @@
 /* Make clicks pass-through */
-#nprogress {
+#rwp {
   pointer-events: none;
 }
 
-#nprogress .bar {
+#rwp .b {
   background: #d29;
 
   position: fixed;

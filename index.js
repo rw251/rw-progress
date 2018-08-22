@@ -23,7 +23,7 @@ exports.Progress = {
   },
 
   isRendered() {
-    return !!document.getElementById('nprogress');
+    return !!document.getElementById('rwp');
   },
 
   done(force) {
@@ -33,19 +33,16 @@ exports.Progress = {
   },
 
   remove() {
-    document.documentElement.classList.remove('nprogress-busy');
-    const progress = document.getElementById('nprogress');
+    const progress = document.getElementById('rwp');
     if (progress && progress.parentNode) progress.parentNode.removeChild(progress);
   },
 
   render(fromStart) {
-    if (this.isRendered()) return document.getElementById('nprogress');
-
-    document.documentElement.classList.add('nprogress-busy');
+    if (this.isRendered()) return document.getElementById('rwp');
 
     const progress = document.createElement('div');
-    progress.id = 'nprogress';
-    progress.innerHTML = '<div class="bar" role="bar"><div class="peg"></div></div>';
+    progress.id = 'rwp';
+    progress.innerHTML = '<div class="b" role="bar"><div class="peg"></div></div>';
 
     const bar = progress.querySelector('[role="bar"]');
     const perc = fromStart ? '-100' : (-1 + (this.status || 0)) * 100;

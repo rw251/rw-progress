@@ -19,4 +19,4 @@ renderPageThenCallback(()=>{
 });
 ```
 
-Automatically adds an element to your `body`.
+Automatically adds an element with id `rwp` to your `body`.
