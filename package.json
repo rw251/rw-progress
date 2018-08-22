@@ -1,0 +1,30 @@
+{
+  "name": "rw-progress",
+  "version": "1.0.0",
+  "description": "Extremely small page loading progress bar",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "cover": "node ./node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rw251/rw-progress.git"
+  },
+  "author": "Richard Williams <1234richardwilliams@gmail.com> (https://rw251.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rw251/rw-progress/issues"
+  },
+  "homepage": "https://github.com/rw251/rw-progress#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.5"
+  }
+}
