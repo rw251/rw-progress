@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/rw251/rw-progress.svg?branch=master)](https://travis-ci.org/rw251/rw-progress)
 [![Coverage Status](https://coveralls.io/repos/github/rw251/rw-progress/badge.svg?branch=master)](https://coveralls.io/github/rw251/rw-progress?branch=master)
+[![Known Vulnerabilities](https://snyk.io/test/github/rw251/rw-progress/badge.svg)](https://snyk.io/test/github/rw251/rw-progress)
 
 Minimalistic progress bar inspired (nicked) largely from http://ricostacruz.com/nprogress/
 
