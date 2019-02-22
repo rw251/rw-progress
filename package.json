@@ -1,6 +1,6 @@
 {
   "name": "rw-progress",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Extremely small page loading progress bar",
   "main": "index.js",
   "scripts": {
